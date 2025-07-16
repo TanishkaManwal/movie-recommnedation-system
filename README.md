@@ -1,4 +1,8 @@
-🎬 Movie Recommender System
+## 🎬 Movie Recommender System
+
+A content-based movie recommendation system built with Streamlit.
+👉 **[Live Demo](https://movie-recommnedation-system-gionvjqfftaov6upmhsi72.streamlit.app/)**  
+
 This is a content-based movie recommendation system built with Python.
 It helps users discover movies similar to the ones they like using a pre-computed similarity matrix and a clean Streamlit app.
 
