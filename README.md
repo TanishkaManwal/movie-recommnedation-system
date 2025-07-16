@@ -1,46 +1,60 @@
-# 🎬 Movie Recommendation System
+🎬 Movie Recommender System
+This is a content-based movie recommendation system built with Python.
+It helps users discover movies similar to the ones they like using a pre-computed similarity matrix and a clean Streamlit app.
 
-This project is a **content-based movie recommendation system** built with **Python**.  
-It helps users discover movies similar to the ones they like by using a pre-computed similarity matrix.
+📌 Features
+🎥 Recommend movies based on a selected title
 
----
+Uses the TMDB 5000 dataset
 
-## 📂 Features
+Fast recommendations with a pre-computed similarity .pkl
 
-- Recommend movies based on selected titles
-- Uses TMDB 5000 dataset
-- Pre-computed similarity matrix for fast recommendations
-- Streamlit app for easy user interaction *(if you use Streamlit)*
-- Auto-downloads large files from Google Drive at runtime
+Auto-downloads required files from Google Drive
 
----
+Streamlit app for easy, interactive UI
 
-## 🚀 How it works
+Click to view trailers
 
-- The app uses a TMDB dataset (`tmdb_5000_credits.csv` and `tmdb_5000_movies.csv`).
-- It builds a similarity matrix (or uses a pre-computed `.pkl`).
-- When you run `app.py`, it:
-  - Checks if `similarity.pkl` is present
-  - If not, downloads it from Google Drive automatically using `gdown`
-- Then it loads the matrix and generates recommendations.
+🚀 How It Works
+The app uses:
+tmdb_5000_movies.csv
+tmdb_5000_credits.csv
+A similarity matrix (similarity.pkl) is precomputed.
 
----
+When you run app.py:
+It checks if the required files exist.
+If missing, it auto-downloads them using gdown.
+Loads the data and displays similar movies for the selected movie.
 
-## 🛠️ Tech Stack
+🛠️ Tech Stack
+Python
+pandas, scikit-learn
+pickle
+gdown for automatic file downloads
+Streamlit for the frontend
+requests for API calls (OMDB)
 
-- **Python**
-- **pandas**, **scikit-learn**
-- **pickle**
-- **gdown** (for downloading files)
-- *(Optional)* **Streamlit** for the frontend
+📸 Screenshots
+Movie selection & recommendations:
+<img width="1887" height="904" alt="image" src="https://github.com/user-attachments/assets/12cbc8d3-699d-4a02-9984-af81718d815f" />
+<img width="1802" height="475" alt="image" src="https://github.com/user-attachments/assets/f2933e70-6f7c-4bdb-80e5-e2bf6c7e1bb2" />
+<img width="1807" height="738" alt="image" src="https://github.com/user-attachments/assets/54df0b83-6474-47fd-b536-7746d97a63d3" />
 
----
+📦 Installation & Run
+1️⃣ Clone the repo:
+bash
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
 
-## 📦 Installation
+2️⃣ Install dependencies:
+bash
+pip install -r requirements.txt
 
-1. **Clone the repo:**
+3️⃣ Run the app:
+bash
+streamlit run app.py
 
-   ```bash
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+❤️ Author
+Made with ❤️ by Tanishka Manwal
+
 
