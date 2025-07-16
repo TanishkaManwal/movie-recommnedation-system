@@ -3,7 +3,17 @@ import pickle
 import pandas as pd
 import requests
 import os
+import gdown   
 
+# -------------------- Download if missing --------------------
+if not os.path.exists('movie_list.pkl'):
+    url = 'https://drive.google.com/uc?id=1LpeIhcQ9bBtlYioAH1MLV2G-SjeL3ZuX'
+    gdown.download(url, 'movie_list.pkl', quiet=False)
+
+if not os.path.exists('similarity.pkl'):
+    url = 'https://drive.google.com/uc?id=1lGNXc65l0zU5M1y1t1lY74yLEueuAjTI'
+    gdown.download(url, 'similarity.pkl', quiet=False)
+    
 # Debug: check files
 st.write("Current working directory:", os.getcwd())
 st.write("Files in current directory:", os.listdir())
