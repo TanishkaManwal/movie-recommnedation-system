@@ -14,9 +14,9 @@ if not os.path.exists('similarity.pkl'):
     url = 'https://drive.google.com/uc?id=1lGNXc65l0zU5M1y1t1lY74yLEueuAjTI'
     gdown.download(url, 'similarity.pkl', quiet=False)
     
-# Debug: check files
-st.write("Current working directory:", os.getcwd())
-st.write("Files in current directory:", os.listdir())
+# # Debug: check files
+# st.write("Current working directory:", os.getcwd())
+# st.write("Files in current directory:", os.listdir())
 # -------------------- Load Data --------------------
 movies = pickle.load(open('movie_list.pkl', 'rb'))
 similarity = pickle.load(open('similarity.pkl', 'rb'))
